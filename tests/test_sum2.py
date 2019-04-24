@@ -6,7 +6,7 @@ import statistics
 from ie_pandas import DataFrame
 
 # simple test to get the sum of the values
-def test_sum1():
+def test_sum2():
 
     dictionary = {
         "pet": np.array(["cat", "dog", "mouse"]),
