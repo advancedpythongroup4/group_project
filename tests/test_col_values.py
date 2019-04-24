@@ -1,5 +1,5 @@
 # import the created dataframe class
-from ie_pandas import col_names
+from ie_pandas import DataFrame
 
 # simple test to get the column values
 def test_get_col_values():
