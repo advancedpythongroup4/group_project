@@ -17,7 +17,7 @@ def test_get_col_values():
 
     df = DataFrame(dictionary)
 
-    expected_output = dictionary.values()  
+    expected_output = list(dictionary.values()) 
 
     output = df.col_values
 
