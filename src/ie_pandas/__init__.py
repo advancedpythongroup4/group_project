@@ -15,4 +15,13 @@ class DataFrame:
     def col_values(self):
         return list(self._col_values)
 
-
+    @property
+    def sum(self):
+        sum_collector = []
+        columns = []
+        for key in dictionary:
+            if dictionary[key].dtype == "float64" or dictionary[key].dtype == "int32":
+                columns.append(key)
+                sum_collector.append(sum(dictionary[key]))
+        print(columns)
+        return sum_collector
