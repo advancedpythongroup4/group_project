@@ -20,7 +20,7 @@ def test_median1():
     columns = []
     for key in dictionary:
         columns.append(key)
-        median_collector.append(median(dictionary[key]))
+        median_collector.append(statistics.median(dictionary[key]))
 
     expected_output = median_collector
 

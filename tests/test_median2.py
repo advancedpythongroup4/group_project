@@ -21,7 +21,7 @@ def test_median2():
     for key in dictionary:
         if dictionary[key].dtype == "float64" or dictionary[key].dtype == "int32":
             columns.append(key)
-            median_collector.append(median(dictionary[key]))
+            median_collector.append(statistics.median(dictionary[key]))
 
     expected_output = median_collector
 
