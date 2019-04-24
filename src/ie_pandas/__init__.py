@@ -14,6 +14,10 @@ class DataFrame:
     @property
     def col_values(self):
         return list(self._col_values)
+    
+    @property
+    def ncols(self):
+        return len(dictionary)
 
     @property
     def sum(self):
