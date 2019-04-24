@@ -18,15 +18,15 @@ class DataFrame:
     
     @property
     def ncols(self):
-        return len(dictionary)
+        return len(self._items)
 
     @property
     def sum(self):
         sum_collector = []
         columns = []
-        for key in dictionary:
-            if dictionary[key].dtype == "float64" or dictionary[key].dtype == "int32":
+        for key in self._items:
+            if self._items[key].dtype == "float64" or self._items[key].dtype == "int32":
                 columns.append(key)
-                sum_collector.append(sum(dictionary[key]))
+                sum_collector.append(sum(self._items[key]))
         print(columns)
         return sum_collector
