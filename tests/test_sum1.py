@@ -22,7 +22,7 @@ def test_sum1():
         columns.append(key)
         sum_collector.append(sum(dictionary[key]))
 
-    expected_output = sum_collector[]  
+    expected_output = sum_collector
 
     output = df.sum
 
