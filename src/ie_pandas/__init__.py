@@ -8,5 +8,10 @@ class DataFrame:
 
     def __getitem__(self, key):
         return np.array(self._items[key])
+    
+    
+    @property
+    def col_values(self):
+        return self._col_values
 
 
