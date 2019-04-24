@@ -12,6 +12,6 @@ class DataFrame:
     
     @property
     def col_values(self):
-        return self._col_values
+        return list(self._col_values)
 
 
