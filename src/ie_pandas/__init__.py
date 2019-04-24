@@ -10,8 +10,7 @@ class DataFrame:
 
     def __getitem__(self, key):
         return np.array(self._items[key])
-    
-    
+      
     @property
     def col_values(self):
         return list(self._col_values)
@@ -19,6 +18,13 @@ class DataFrame:
     @property
     def ncols(self):
         return len(self._items)
+    
+    @property
+    def nrows(self):
+        len_check = []
+        for key in self._items:
+            len_check.append(len(self._items[key]))
+        return len(self._items[key])
 
     @property
     def sum(self):
@@ -30,3 +36,14 @@ class DataFrame:
                 sum_collector.append(sum(self._items[key]))
         print(columns)
         return sum_collector
+    
+    @property
+    def median(self):
+        med_collector = []
+        columns = []
+        for key in self._items:
+            if self._items[key].dtype == "float64" or self._items[key].dtype == "int32":
+                columns.append(key)
+                med_collector.append(statistics.median(self._items[key]))
+        print(columns)
+        return med_collector
