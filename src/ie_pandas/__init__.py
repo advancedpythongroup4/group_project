@@ -18,7 +18,7 @@ class DataFrame:
     
     @property
     def ncols(self):
-        return len(self)
+        return len(dictionary)
 
     @property
     def sum(self):
