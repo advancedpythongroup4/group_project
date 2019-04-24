@@ -5,8 +5,8 @@ import statistics
 # import the created dataframe class
 from ie_pandas import DataFrame
 
-# simple test to get the column values
-def test1_sum():
+# simple test to get the sum of the values
+def test_sum1():
 
     dictionary = {
         "pet": np.array(["cat", "dog", "mouse"]),
@@ -21,8 +21,6 @@ def test1_sum():
     for key in dictionary:
         columns.append(key)
         sum_collector.append(sum(dictionary[key]))
-    print(columns)
-    return sum_collector
 
     expected_output = sum_collector[]  
 
