@@ -13,22 +13,15 @@ class DataFrame:
     def __getitem__(self, key):
         return np.array(self._items[key])
       
-    @property
-    def col_values(self):
-        return list(self._col_values)
-    
-    @property
     def ncols(self):
         return len(self._items)
     
-    @property
     def nrows(self):
         len_check = []
         for key in self._items:
             len_check.append(len(self._items[key]))
         return len(self._items[key])
 
-    @property
     def sum(self):
         sum_collector = []
         columns = []
@@ -39,7 +32,7 @@ class DataFrame:
         print(columns)
         return sum_collector
     
-    @property
+
     def median(self):
         med_collector = []
         columns = []
