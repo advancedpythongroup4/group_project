@@ -17,8 +17,8 @@ def test_set():
     pet1="lizard"
     pet2="turtle"
 
-    assert df["pet"][0]==pet0
-    assert df["pet"][1]==pet1
-    assert df["pet"][2]==pet2
+    assert df[["pet"]][0][0]==pet0
+    assert df[["pet"]][0][1]==pet1
+    assert df[["pet"]][0][2]==pet2
 
 
