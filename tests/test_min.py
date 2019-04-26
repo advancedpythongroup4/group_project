@@ -24,6 +24,6 @@ def test_min():
 
     expected_output = min_collector
 
-    output = df.min
+    output = df.min()
 
     assert output == expected_output
