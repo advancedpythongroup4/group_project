@@ -19,6 +19,6 @@ def test_get_number_of_columns():
 
     expected_output = len(dictionary) 
 
-    output = df.ncols
+    output = df.ncols()
 
     assert output == expected_output
