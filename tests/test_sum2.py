@@ -25,6 +25,6 @@ def test_sum2():
 
     expected_output = sum_collector
 
-    output = df.sum
+    output = df.sum()
 
     assert output == expected_output
