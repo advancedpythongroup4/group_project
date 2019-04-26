@@ -24,6 +24,6 @@ def test_max():
 
     expected_output = max_collector
 
-    output = df.max
+    output = df.max()
 
     assert output == expected_output
