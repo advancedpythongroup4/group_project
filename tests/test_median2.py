@@ -25,6 +25,6 @@ def test_median2():
 
     expected_output = median_collector
 
-    output = df.median
+    output = df.median()
 
     assert output == expected_output
