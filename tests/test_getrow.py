@@ -18,7 +18,7 @@ def test_getrow():
     weight0=1.0
     sick0=True
 
-    assert df.get_row(0)[0]==pet0
-    assert df.get_row(0)[1]==age0
-    assert df.get_row(0)[2]==weight0
-    assert df.get_row(0)[3]==sick0
+    assert df.get_row([0])[0]==pet0
+    assert df.get_row([0])[1]==age0
+    assert df.get_row([0])[2]==weight0
+    assert df.get_row([0])[3]==sick0
