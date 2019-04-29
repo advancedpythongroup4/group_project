@@ -16,9 +16,9 @@ def test_get():
 
 	df=DataFrame(dictionary)
 
-	assert df["pet"][0]==pet0
-	assert df["age"][0]==age0
-	assert df["weight"][0]==weight0
-	assert df["sick"][0]==sick0
+	assert df[["pet"]][0][0]==pet0
+	assert df[["age"]][0][0]==age0
+	assert df[["weight"]][0][0]==weight0
+	assert df[["sick"]][0][0]==sick0
 
 
