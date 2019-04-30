@@ -17,5 +17,5 @@ def test_getrow():
 
     df=DataFrame(dictionary)
 
-    assert df.get_row([0,1])[0]=row0
-    assert df.get_row([0,1])[1]=row1
+    assert df.get_row([0,1])[0]==row0
+    assert df.get_row([0,1])[1]==row1
