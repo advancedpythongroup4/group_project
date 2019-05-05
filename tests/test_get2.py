@@ -14,9 +14,7 @@ def test_get():
 		}
 
   group0 = ["cat","dog"]
-  group1 = ["dog",2.0]
 
 	df=DataFrame(dictionary)
 
-	assert df[["pet"]][0,1] == group0
-	assert df[["pet","weight"]][1] == group1
+	assert df[["pet"]][0:2] == group0
