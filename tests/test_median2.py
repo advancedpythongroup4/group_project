@@ -20,7 +20,8 @@ def test_median2():
     median_collector = []
     columns = []
     for key in dictionary:
-        if dictionary[key].dtype == "float64" or dictionary[key].dtype == "int32":
+        if dictionary[key].dtype == "float64" or \
+           dictionary[key].dtype == "int32":
             columns.append(key)
             median_collector.append(statistics.median(dictionary[key]))
 

@@ -19,7 +19,8 @@ def test_max():
     max_collector = []
     columns = []
     for key in dictionary:
-        if dictionary[key].dtype == "float64" or dictionary[key].dtype == "int32":
+        if dictionary[key].dtype == "float64" or \
+           dictionary[key].dtype == "int32":
             columns.append(key)
             max_collector.append(max(dictionary[key]))
 
