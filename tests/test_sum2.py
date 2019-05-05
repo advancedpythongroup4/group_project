@@ -20,8 +20,7 @@ def test_sum2():
     sum_collector = []
     columns = []
     for key in dictionary:
-        if dictionary[key].dtype == "float64" or 
-            dictionary[key].dtype == "int32":
+        if dictionary[key].dtype == "float64" or dictionary[key].dtype == "int32":
             columns.append(key)
             sum_collector.append(sum(dictionary[key]))
 
