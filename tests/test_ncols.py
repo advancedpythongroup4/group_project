@@ -17,7 +17,7 @@ def test_get_number_of_columns():
 
     df = DataFrame(dictionary)
 
-    expected_output = len(dictionary) 
+    expected_output = len(dictionary)
 
     output = df.ncols()
 

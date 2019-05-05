@@ -2,6 +2,7 @@ import numpy as np
 import statistics
 import matplotlib.pyplot as plt
 
+
 class DataFrame:
     def __init__(self, dictionary):
         len_check = []
@@ -40,9 +41,11 @@ class DataFrame:
         final_text = []
         for i in range(0, cols * rows, cols):
             final_text.append(text[slice(i, i + cols)])
-        table = plt.table(cellText=final_text, colLabels=key, colColours=["c"] * cols, loc = 'center')
+        table = plt.table(
+            cellText=final_text, colLabels=key, colColours=["c"] * cols, loc="center"
+        )
         table.set_fontsize(14)
-        table.scale(1.5,1.5)
+        table.scale(1.5, 1.5)
         plt.axis("off")
         return getitem
 
@@ -56,10 +59,13 @@ class DataFrame:
         size = len(self._items)
         if len(get_row) == size:
             table = plt.table(
-                cellText=[get_row], colLabels=columns, colColours=["c"] * len(columns), loc = 'center'
+                cellText=[get_row],
+                colLabels=columns,
+                colColours=["c"] * len(columns),
+                loc="center",
             )
             table.set_fontsize(14)
-            table.scale(1.5,1.5)
+            table.scale(1.5, 1.5)
             plt.axis("off")
             return get_row
         else:
@@ -70,10 +76,13 @@ class DataFrame:
                 get_row = get_row[size:]
             sub_row.append(get_row)
             table = plt.table(
-                cellText=sub_row, colLabels=columns, colColours=["c"] * len(columns), loc = 'center'
+                cellText=sub_row,
+                colLabels=columns,
+                colColours=["c"] * len(columns),
+                loc="center",
             )
             table.set_fontsize(14)
-            table.scale(1.5,1.5)
+            table.scale(1.5, 1.5)
             plt.axis("off")
             return sub_row
 
@@ -100,10 +109,10 @@ class DataFrame:
             cellText=[sum_collector],
             colLabels=columns,
             colColours=["c"] * len(columns),
-            loc = 'center'
+            loc="center",
         )
         table.set_fontsize(14)
-        table.scale(1.5,1.5)
+        table.scale(1.5, 1.5)
         plt.axis("off")
         return sum_collector
 
@@ -118,10 +127,10 @@ class DataFrame:
             cellText=[med_collector],
             colLabels=columns,
             colColours=["c"] * len(columns),
-            loc = 'center'
+            loc="center",
         )
         table.set_fontsize(14)
-        table.scale(1.5,1.5)
+        table.scale(1.5, 1.5)
         plt.axis("off")
         return med_collector
 
@@ -136,10 +145,10 @@ class DataFrame:
             cellText=[min_collector],
             colLabels=columns,
             colColours=["c"] * len(columns),
-            loc = 'center'
+            loc="center",
         )
         table.set_fontsize(14)
-        table.scale(1.5,1.5)
+        table.scale(1.5, 1.5)
         plt.axis("off")
         return min_collector
 
@@ -157,7 +166,7 @@ class DataFrame:
             loc="center",
         )
         table.set_fontsize(14)
-        table.scale(1.5,1.5)
+        table.scale(1.5, 1.5)
         plt.axis("off")
         return max_collector
 
@@ -166,9 +175,9 @@ class DataFrame:
             cellText=np.array(list(self._col_values)).transpose(),
             colLabels=list(self._col_names),
             colColours=["c"] * len(self._items),
-            loc = 'center'
+            loc="center",
         )
         table.set_fontsize(14)
-        table.scale(1.5,1.5)
+        table.scale(1.5, 1.5)
         plt.axis("off")
         return f"{self._items}"
