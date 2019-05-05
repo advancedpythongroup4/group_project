@@ -2,9 +2,9 @@
 import numpy as np
 import statistics
 
-
 # import the created dataframe class
 from ie_pandas import DataFrame
+
 
 # simple test to get the number of columns
 def test_get_number_of_columns():
