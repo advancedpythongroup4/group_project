@@ -2,6 +2,7 @@
 import numpy as np
 import statistics
 
+
 # import the created dataframe class
 from ie_pandas import DataFrame
 
