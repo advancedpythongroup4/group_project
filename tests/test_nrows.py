@@ -17,7 +17,7 @@ def test_get_number_of_rows():
 
     df = DataFrame(dictionary)
 
-    expected_output = len(list(dictionary.keys())[0]) 
+    expected_output = len(list(dictionary.keys())[0])
 
     output = df.nrows()
 
