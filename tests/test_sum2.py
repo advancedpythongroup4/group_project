@@ -5,6 +5,7 @@ import statistics
 # import the created dataframe class
 from ie_pandas import DataFrame
 
+
 # simple test to get the sum of the values
 def test_sum2():
 
@@ -19,7 +20,8 @@ def test_sum2():
     sum_collector = []
     columns = []
     for key in dictionary:
-        if dictionary[key].dtype == "float64" or dictionary[key].dtype == "int32":
+        if dictionary[key].dtype == "float64" or 
+            dictionary[key].dtype == "int32":
             columns.append(key)
             sum_collector.append(sum(dictionary[key]))
 

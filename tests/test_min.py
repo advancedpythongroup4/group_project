@@ -4,6 +4,7 @@ import statistics
 # import the created dataframe class
 from ie_pandas import DataFrame
 
+
 # simple test to get the minimum value
 def test_min():
 
@@ -18,7 +19,8 @@ def test_min():
     min_collector = []
     columns = []
     for key in dictionary:
-        if dictionary[key].dtype == "float64" or dictionary[key].dtype == "int32":
+        if dictionary[key].dtype == "float64" or 
+            dictionary[key].dtype == "int32":
             columns.append(key)
             min_collector.append(min(dictionary[key]))
 

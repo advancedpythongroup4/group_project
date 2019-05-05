@@ -5,6 +5,7 @@ import statistics
 # import the created dataframe class
 from ie_pandas import DataFrame
 
+
 # simple test to get the number of rows
 def test_get_number_of_rows():
 
