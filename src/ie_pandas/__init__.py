@@ -42,8 +42,7 @@ class DataFrame:
         for i in range(0, cols * rows, cols):
             final_text.append(text[slice(i, i + cols)])
         table = plt.table(
-            cellText=final_text, colLabels=key, colColours=["c"] * cols, 
-            loc="center"
+            cellText=final_text, colLabels=key, colColours=["c"] * cols, loc="center"
         )
         table.set_fontsize(14)
         table.scale(1.5, 1.5)
@@ -103,8 +102,7 @@ class DataFrame:
         sum_collector = []
         columns = []
         for key in self._items:
-            if self._items[key].dtype == "float64" or 
-                self._items[key].dtype == "int32":
+            if self._items[key].dtype == "float64" or self._items[key].dtype == "int32":
                 columns.append(key)
                 sum_collector.append(sum(self._items[key]))
         table = plt.table(
@@ -122,8 +120,7 @@ class DataFrame:
         med_collector = []
         columns = []
         for key in self._items:
-            if self._items[key].dtype == "float64" or 
-                self._items[key].dtype == "int32":
+            if self._items[key].dtype == "float64" or self._items[key].dtype == "int32":
                 columns.append(key)
                 med_collector.append(statistics.median(self._items[key]))
         table = plt.table(
@@ -141,8 +138,7 @@ class DataFrame:
         min_collector = []
         columns = []
         for key in self._items:
-            if self._items[key].dtype == "float64" or 
-                self._items[key].dtype == "int32":
+            if self._items[key].dtype == "float64" or self._items[key].dtype == "int32":
                 columns.append(key)
                 min_collector.append(min(self._items[key]))
         table = plt.table(
@@ -160,8 +156,7 @@ class DataFrame:
         max_collector = []
         columns = []
         for key in self._items:
-            if self._items[key].dtype == "float64" or 
-                self._items[key].dtype == "int32":
+            if self._items[key].dtype == "float64" or self._items[key].dtype == "int32":
                 columns.append(key)
                 max_collector.append(max(self._items[key]))
         table = plt.table(
