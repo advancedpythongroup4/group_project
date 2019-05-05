@@ -2,6 +2,7 @@
 from ie_pandas import DataFrame
 import numpy as np
 
+
 # Define test to get more than one item
 def test_get2():
     pet1 = "dog"
