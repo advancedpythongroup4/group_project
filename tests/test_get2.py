@@ -6,6 +6,8 @@ import numpy as np
 # Define test to get more than one item
 def test_get():
 	group0 = ["cat","dog"]
+	pet1 = "dog"
+	age1 = 2
 
 	dictionary = {
     		"pet": np.array(["cat", "dog", "mouse"]),
@@ -17,3 +19,5 @@ def test_get():
 	df=DataFrame(dictionary)
 
 	assert df[["pet"]][0:2][0:2] == group0
+	assert df[["Pet","age"]][0][1] == pet1
+	assert df[["Pet","age"]][1][1] == age1
